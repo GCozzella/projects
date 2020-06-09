@@ -90,32 +90,6 @@ nx.draw_networkx(G,node_color=Color(G),node_size=20,with_labels=False)
 plt.title('Our population and its connections with one infection.')
 plt.show()
 
-infection_seed=np.random.randint(len(G.nodes()))
-G.nodes[infection_seed]['I']='red'
-
-#To plot the network we passed a color argument to nx.draw(). Since now we will have nodes
-#with different colors, let us create a function to return a list of colors.
-
-def Color(G):
-    '''
-    Generates a list of colors from the edges' colors.
-    
-    params:
-    :G: a graph
-    
-    returns:
-    :color: a list of blue/red colors, symbolizing healthy and infected nodes.
-    '''
-    
-    color=[n[1]['I'] for n in [*G.nodes(data=True)]]
-    return(color)
-
-#Plotting again
-
-nx.draw_networkx(G,node_color=Color(G),node_size=20,with_labels=False)
-plt.title('Our population and its connections with one infection.')
-plt.show()
-
 def Update(G):
     '''
     Update the graph by:
