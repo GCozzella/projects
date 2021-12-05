@@ -7,3 +7,5 @@
 3 - minicurso_usina_jr / Minicourse given online about the basics of Python and DS
 
 4 - genetic_algorithms / Short presentation given about genetic algorigthms using DEAP
+
+5 - random_boolean_network / A simulation of a random boolean network (based on a video by Computerphile)
